@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from turtle import left
 from Datos import calculo_ratios_metricas
 from grafico import implementar_grafico
 

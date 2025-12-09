@@ -9,7 +9,11 @@ def main():
     # ventana.configure(bg="white")
     ventana.title("Bolsa de Valores")
 
-    busqueda = tk.Entry(font=("Arial",12))
+    tickers=["AAPL", "GOOGL", "MSFT", "TSLA"]
+
+    selecion= tk.StringVar()
+    busqueda = ttk.Combobox(ventana,textvariable=selecion, values=tickers,font=("Arial",12),width=30)
+
     busqueda.pack(pady=30)
 
 
@@ -19,7 +23,7 @@ def main():
         ventana_2(Nombre_accion)
 
 
-    boton = tk.Button(ventana,text="Buscar Acción", command=Obtener_Accion)
+    boton = tk.Button(ventana,text="Buscar Acción", bg="white",bd=0,command=Obtener_Accion)
     boton.pack()
 
     ventana.mainloop()
